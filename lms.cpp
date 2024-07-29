@@ -63,16 +63,16 @@ class student{
 
 class library{
     public:
-    unordered_map<int, vector<long long int>> mp;
+    unordered_map<int, vector<long long int>> mp1;
    
     void assignBook(int uid, long long int isbn){
         //mp.insert({uid,isbn});
-        mp[uid].push_back(isbn);
+        mp1[uid].push_back(isbn);
     }
    void returnedBook(int uid, long long int isbn){
       // for(auto it: mp.find(uid)){
-       auto i=mp.find(uid);
-           if(i!=mp.end()){
+       auto i=mp1.find(uid);
+           if(i!=mp1.end()){
                //vector<long> temp;
               auto temp=i->second;
                /*long long int*/
@@ -92,9 +92,9 @@ class library{
    }
     
     void getmappingdetails(int uid){
-        if(mp.find(uid)!=mp.end()){
+        if(mp1.find(uid)!=mp1.end()){
         cout<<"Student with the following uid has been assigned \n";
-        for(auto isbn: mp[uid]){
+        for(auto isbn: mp1[uid]){
             cout<<isbn<<"\n";
         }
     }
