@@ -69,13 +69,13 @@ class library{
         //mp.insert({uid,isbn});
         mp[uid].push_back(isbn);
     }
-   void returnedBook(int uid, long long int isbn){
+   /* void returnedBook(int uid, long long int isbn){
       // for(auto it: mp.find(uid)){
        auto i=mp.find(uid);
            if(i!=mp.end()){
                //vector<long> temp;
               auto temp=i->second;
-               /*long long int*/
+               //long long int
                auto ans=find(temp.begin(),temp.end(), isbn);
                if(ans!=temp.end()){
                    temp.erase(ans);
@@ -90,6 +90,7 @@ class library{
            
        
    }
+   */
     
     void getmappingdetails(int uid){
         if(mp.find(uid)!=mp.end()){
@@ -153,7 +154,7 @@ int main(){
     
     cout << "Enter UID and ISBN of the book to be returned:\n";
     cin >> a >> isbn_delete;
-    library1.returnedBook(a, isbn_delete);
+   // library1.returnedBook(a, isbn_delete);
 
     return 0;
 }
